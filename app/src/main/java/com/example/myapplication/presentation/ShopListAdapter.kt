@@ -1,27 +1,22 @@
 package com.example.myapplication.presentation
 
-import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.core.content.ContextCompat
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.ListAdapter
 import com.example.myapplication.R
 import com.example.myapplication.domain.ShopItem
 
-class ShopListAdapter:RecyclerView.Adapter<ShopListAdapter.ShopItemViewHolder>() {
+class ShopListAdapter:ListAdapter<ShopItem,ShopItemViewHolder>(ShopItemDiffCallBack()) {
 
     var count = 0
-    var shopList = listOf<ShopItem>()
-        set(value) {
-            val callback = ShopListDiffCallback(shopList, value)
-            val diffResult = DiffUtil.calculateDiff(callback)
-            diffResult.dispatchUpdatesTo(this)
-            field = value
-        }
+//    var shopList = listOf<ShopItem>()
+//        set(value) {
+//            val callback = ShopListDiffCallback(shopList, value)
+//            val diffResult = DiffUtil.calculateDiff(callback)
+//            diffResult.dispatchUpdatesTo(this)
+//            field = value
+//        }
 
 
    // var onShopItemLongClickListener: OnShopItemLongClickListener?=null
@@ -45,7 +40,7 @@ class ShopListAdapter:RecyclerView.Adapter<ShopListAdapter.ShopItemViewHolder>()
     }
 
     override fun onBindViewHolder(viewHolder: ShopItemViewHolder, position: Int) {
-        val shopItem = shopList[position]
+        val shopItem = getItem(position)
 
         viewHolder.view.setOnLongClickListener {
         //    onShopItemLongClickListener?.onShopItemLongClickListener(shopItem)
@@ -62,12 +57,12 @@ class ShopListAdapter:RecyclerView.Adapter<ShopListAdapter.ShopItemViewHolder>()
 
     }
 
-    override fun getItemCount(): Int {
-        return shopList.size
-    }
+//    override fun getItemCount(): Int {
+//        return shopList.size
+//    }
 
     override fun getItemViewType(position: Int): Int {
-        val item=shopList[position]
+        val item= getItem(position)
 return if(item.enabled){
     VIEW_TYPE_ENABLED
 }else{
@@ -75,15 +70,10 @@ return if(item.enabled){
 }
     }
 
-    class ShopItemViewHolder(val view: View):RecyclerView.ViewHolder(view) {
 
-        val tvName=view.findViewById<TextView>(R.id.tv_name)
-        val tvCount=view.findViewById<TextView>(R.id.tv_count)
-    }
-
-    interface OnShopItemLongClickListener{
-        fun onShopItemLongClickListener(shopItem: ShopItem)
-    }
+//    interface OnShopItemLongClickListener{
+//        fun onShopItemLongClickListener(shopItem: ShopItem)
+//    }
 
 
     companion object{
