@@ -1,16 +1,14 @@
 package com.example.playlistmaker
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageView
 import com.example.myapplication.R
 
-class ActivitySettings : AppCompatActivity() {
+class Activitytest4 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_settings)
+        setContentView(R.layout.activity_test4)
 //        val backToMainSettings = findViewById<Button>(R.id.button_back)
 //        backToMainSettings.setOnClickListener {
 //            val backToMainIntent = Intent(this, MainActivity::class.java)

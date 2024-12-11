@@ -24,13 +24,13 @@
     </FrameLayout>
 
     <Button
-        android:id="@+id/button_search"
+        android:id="@+id/test1"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_marginTop="@dimen/padding24"
         android:layout_weight="1"
         android:foreground="?attr/selectableItemBackground"
-        android:text="@string/search"
+        android:text="test1"
         android:textAllCaps="false"
         app:icon="@drawable/ic_vector"
         tools:ignore="RtlCompat"
@@ -38,7 +38,7 @@
         />
 
     <Button
-        android:id="@+id/button_media"
+        android:id="@+id/test2"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
 
@@ -47,7 +47,7 @@
         android:layout_weight="1"
         android:foreground="?attr/selectableItemBackground"
         android:gravity="center"
-        android:text="@string/media"
+        android:text="test2"
         android:textAllCaps="false"
         app:icon="@drawable/ic_media"
         tools:ignore="RtlCompat"
@@ -56,17 +56,35 @@
         />
 
     <Button
-        android:id="@+id/button_settings"
+        android:id="@+id/test3"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
+
         android:layout_marginTop="@dimen/padding16"
-        android:layout_marginBottom="@dimen/padding14"
+
         android:layout_weight="1"
         android:foreground="?attr/selectableItemBackground"
         android:gravity="center"
-        android:text="@string/settings"
+        android:text="test3"
         android:textAllCaps="false"
         app:icon="@drawable/ic_sitting"
         tools:ignore="RtlCompat"
+        app:iconGravity="textStart"
     />
+    <Button
+        android:id="@+id/test4"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+
+        android:layout_marginTop="@dimen/padding16"
+
+        android:layout_weight="1"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="test4"
+        android:textAllCaps="false"
+        app:icon="@drawable/ic_sitting"
+        tools:ignore="RtlCompat"
+        app:iconGravity="textStart"
+        />
 </LinearLayout>

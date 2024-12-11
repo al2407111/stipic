@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
 import com.example.myapplication.R
 class MainActivity : AppCompatActivity(){
 
@@ -31,21 +30,26 @@ class MainActivity : AppCompatActivity(){
 //massage3.setOnClickListener{Toast.makeText(this,"Кнопка3",Toast.LENGTH_SHORT).show()
 //            }
 
-            val settingsButton = findViewById<Button>(R.id.button_settings)
+            val settingsButton = findViewById<Button>(R.id.test3)
             settingsButton.setOnClickListener {
-            val settingsButtonIntent = Intent(this, ActivitySettings::class.java)
+            val settingsButtonIntent = Intent(this, Activitytest3::class.java)
             startActivity(settingsButtonIntent)
             }
 
-val mediaButton=findViewById<Button>(R.id.button_media)
+val mediaButton=findViewById<Button>(R.id.test2)
             mediaButton.setOnClickListener{
-                val mediaButtonIntent = Intent(this, ActivityMedia::class.java)
+                val mediaButtonIntent = Intent(this, Activitytest2::class.java)
                 startActivity(mediaButtonIntent)
             }
-            val search=findViewById<Button>(R.id.button_search)
+            val search=findViewById<Button>(R.id.test1)
             search.setOnClickListener {
-                val searchButtonIntent=Intent(this, ActivitySearch::class.java)
+                val searchButtonIntent=Intent(this, Activitytest1::class.java)
                 startActivity(searchButtonIntent)
+            }
+            val test4=findViewById<Button>(R.id.test4)
+            test4.setOnClickListener {
+                val test4Intent=Intent(this, Activitytest4::class.java)
+                startActivity(test4Intent)
             }
         }
     }
